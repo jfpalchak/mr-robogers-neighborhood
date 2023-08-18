@@ -1,6 +1,6 @@
 
 
-// for test 6
+// for test 7
 function beepBoop(input) {
   
   let array = [];
@@ -10,12 +10,12 @@ function beepBoop(input) {
   }
 
   let beepArray = array.map(function(number) {
-    if (number.toString().includes(2)) {
+    if (number.toString().includes(3)) {
+      return number = "Won't you be my neighbor?";
+    } else if (number.toString().includes(2)) {
       return number = "Boop!";
     } else if (number.toString().includes(1)) {
       return number = "Beep!";
-    } else if (number === 3) {
-      return number = "Won't you be my neighbor?"
     } else {
       return number;
     }
