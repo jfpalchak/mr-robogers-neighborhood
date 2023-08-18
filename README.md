@@ -76,6 +76,11 @@ Code: const input = 13;
       beepBoop(input);
 Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, "Beep!", "Beep!", "Boop!", "Won't you be my neighbor?"]
 
+Test 8: "It should return an empty array if the user submits without inputting any number."
+Code: const input = "";
+      beepBoop(input);
+Expected Ouput: []
+
 ```
 
 #### **Description:** itIncludes()
