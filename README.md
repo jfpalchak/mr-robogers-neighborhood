@@ -61,16 +61,20 @@ Code: const input = 3;
       beepBoop(input);
 Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?"]
 
-Test 5: "If the number is greater than 9 and includes the digit 1, the entire number is replaced with 'Beep!'."
+Test 5: "If the number includes the digit 1, the entire number is replaced with 'Beep!'."
 Code: const input = 11;
       beepBoop(input);
 Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, "Beep!", "Beep!"]
 
-Test 6: "If the number is greater than 9 and includes the digit 2, the entire number is replaced with 'Boop!' - even if the number includes the digit 1."
+Test 6: "If the number includes the digit 2, the entire number is replaced with 'Boop!' - even if the number also includes the digit 1."
 Code: const input = 12;
       beepBoop(input);
 Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, "Beep!", "Beep!", "Boop!"]
 
+Test 7: "If the number includes the digit 3, the entire number is replaced with 'Won't you be my neighbor?' - even if the number also includes the digit 1, or digit 2."
+Code: const input = 13;
+      beepBoop(input);
+Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, "Beep!", "Beep!", "Boop!", "Won't you be my neighbor?"]
 
 ```
 
