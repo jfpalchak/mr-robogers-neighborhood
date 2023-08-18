@@ -13,7 +13,15 @@
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+This is a web application that asks the user for a single number of any size, and once submitted, returns a list of values starting from 0 up to the user's inputted number, by increments of 1. However, the application make's the following substitutions within the returned list:
+
+* For numbers that contain a 1, all digits are replaced with "Beep!"
+* For numbers that contain a 2, all digits are replaced with "Boop!"
+    * This substitution takes precedence over the presence of a number containing a 1.
+* For numbers that contain a 3, all digits are replaced with "Won't you be my neighbor?"
+    * This substitution takes precedence over the presence of a number containing a 1, or a 2.
+
+The list is then presented for the user beneath the initial form. The user may continue submitting new numbers, presenting the user with new results with each submission. However, should the user submit an empty input, the results will be removed and the page will reset to it's default state.
 
 ## Setup/Installation Requirements
 
@@ -33,8 +41,7 @@ git clone https://github.com/jfpalchak/mr-robogers-neighborhood.git
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* No known bugs at this state.
 
 ## Tests
 

@@ -68,13 +68,16 @@ function removePreviousResults() {
 // however, it's only created if the results element is longer than the viewport height
 function linkBackToTopIfBig() {
   const div = document.getElementById('beepBoop-results');
+
   if (div.offsetHeight > window.innerHeight) {
     const toTop = document.createElement('a');
     const subDiv = document.createElement('div');
+
     subDiv.setAttribute('id', 'to-top');
-    div.append(subDiv);
     toTop.setAttribute('href', '#top');
+    
     toTop.append('(Back to Top)');
+    div.append(subDiv);
     subDiv.append(toTop);
   }
 }

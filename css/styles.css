@@ -15,12 +15,19 @@
 }
 
 /* FORM */
+
 .form-content {
   padding: 20px;
+  /* flex-direction: row; */
 }
 
 label {
   font-weight: bold;
+}
+
+#reverse {
+  display: none;
+  float: right;
 }
 
 /* RESULTS */
