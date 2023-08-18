@@ -46,20 +46,27 @@ Code: const input = 0;
       beepBoop(input);
 Expected Ouput: [0]
 
-Test 2: "It should replace numbers that contain a '1' with 'Beep!'."
+Test 2: "It should replace the number '1' with 'Beep!'."
 Code: const input = 1;
       beepBoop(input);
 Expected Output: [0, 'Beep!']
 
-Test 3: "It should replace numbers that contain a '2' with 'Boop!'."
+Test 3: "It should replace the number '2' with 'Boop!'."
 Code: const input = 2;
       beepBoop(input);
 Expected Output: [0, 'Beep!', 'Boop!']
 
-Test 4: "It should replace numbers that contain a '3' with a 'Won't you be my neighbor?'."
+Test 4: "It should replace the number '3' with a 'Won't you be my neighbor?'."
 Code: const input = 3;
       beepBoop(input);
 Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?"]
+
+Test 5: "If the number is greater than 9 and includes the digit 1, the entire number is replaced with 'Beep!'."
+Code: const input = 11;
+      beepBoop(input);
+Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, "Beep!", "Beep!"]
+
+
 ```
 
 ## License

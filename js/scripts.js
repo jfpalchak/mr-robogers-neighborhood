@@ -11,9 +11,11 @@ function beepBoop(input) {
 
   let beepArray = array.map(function(number) {
     if (number === 1) {
-      return number = 'Beep!';
+      return number = "Beep!";
     } else if (number === 2) {
-      return number = 'Boop!';
+      return number = "Boop!";
+    } else if (number === 3) {
+      return number = "Won't you be my neighbor?"
     } else {
       return number;
     }
