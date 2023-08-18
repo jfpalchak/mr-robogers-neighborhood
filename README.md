@@ -66,6 +66,11 @@ Code: const input = 11;
       beepBoop(input);
 Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, "Beep!", "Beep!"]
 
+Test 6: "If the number is greater than 9 and includes the digit 2, the entire number is replaced with 'Boop!'."
+Code: const input = 12;
+      beepBoop(input);
+Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, "Beep!", "Beep!", "Boop!"]
+
 
 ```
 
