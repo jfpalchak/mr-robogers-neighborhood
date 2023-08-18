@@ -30,8 +30,13 @@ label {
   /* background-color:bisque; */
 }
 
-#scroll-button {
+#to-top {
   text-align: center;
   margin: 10px auto;
   padding-bottom: 10px;
+}
+
+a:link {
+  text-decoration: inherit;
+  color: inherit;
 }

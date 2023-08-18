@@ -22,10 +22,9 @@ function itIncludes(number, digit) {
 // and replacing 2 is more important than replacing 1.
 // It then returns this newly created array.
 function beepBoop(input) {
-  let array = [];
+  const array = [];
 
-  // if the user submits an empty input box, 
-  // return the empty array
+  // if the user submits an empty input box, return the empty array
   if (input === ""){
     return array;
   }
@@ -35,7 +34,7 @@ function beepBoop(input) {
     array.push(i);
   }
 
-  // transform the newly created array
+  // transform the newly created array according to our logic
   let beepArray = array.map(function(number) {
     if (itIncludes(number, 3)) {
       return number = "Won't you be my neighbor?";
@@ -64,14 +63,28 @@ function removePreviousResults() {
   }
 }
 
+// linkBackToTopIfBig() add's a link to the bottom of the results element,
+// which brings the user back to the top of the page;
+// however, it's only created if the results element is longer than the viewport height
+function linkBackToTopIfBig() {
+  const div = document.getElementById('beepBoop-results');
+  if (div.offsetHeight > window.innerHeight) {
+    const toTop = document.createElement('a');
+    const subDiv = document.createElement('div');
+    subDiv.setAttribute('id', 'to-top');
+    div.append(subDiv);
+    toTop.setAttribute('href', '#top');
+    toTop.append('(Back to Top)');
+    subDiv.append(toTop);
+  }
+}
+
 // showResults() takes the new array as its parameter,
 // then updates the DOM by making the resulting elements of the array visible to the user
 function showResults(array) {
-  // first, check for and remove previous results
   removePreviousResults();
 
-  // if the user doesn't enter a number, and the array has no length, 
-  // stop here and return null, otherwise continue on
+  // if the user doesn't enter a number, stop here and return null
   if (!array.length) {
     return null;
   }
@@ -79,17 +92,12 @@ function showResults(array) {
   const div = document.createElement('div');
   div.setAttribute('id','beepBoop-results');
   div.setAttribute('class', 'container');
-  const body = document.body.append(div);
+  document.body.append(div);
 
-  //const ul = document.createElement('ul'); // LIST
-  //div.append(ul);
-  const p = document.createElement('p'); // PARAGRAPH
+  const p = document.createElement('p');
   div.append(p);
 
   array.forEach(function(element, index) {
-    //let li = document.createElement('li');
-    //li.append(element);
-    //ul.append(li);
     if (index < array.length - 1) {
       p.append(element + ", ")
     } else {
@@ -97,18 +105,8 @@ function showResults(array) {
     }
   })
 
-  // if the printed results are longer than the viewport height
-  if (div.offsetHeight > window.innerHeight) {
-    const button = document.createElement('button');
-    const div2 = document.createElement('div');
-    div2.setAttribute('id', 'scroll-button');
-    div.append(div2);
-    button.setAttribute('type', 'button');
-    button.setAttribute('class', 'btn btn-primary');
-    button.append('Back to Top');
-    div2.append(button);
-    scrollTo(0, document.body.scrollHeight);
-  }
+  linkBackToTopIfBig();
+
 }
 
 // handleSubmit() creates an event handler for the form submission
@@ -117,11 +115,6 @@ function handleSubmit(e) {
 
   const userInput = document.getElementById('user-number').value;
   const boopArray = beepBoop(userInput);
-
-  // ********************************
-  // * DEBUGGING: WHAT'S THE ARRAY? *
-  // ********************************
-  console.log(boopArray);
 
   showResults(boopArray);
 }
