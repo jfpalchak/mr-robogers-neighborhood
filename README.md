@@ -121,7 +121,7 @@ Expected Output: true
 
 ## License
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+MIT License
 
 Copyright (c) 8/18/2023 Joey Palchak
 
