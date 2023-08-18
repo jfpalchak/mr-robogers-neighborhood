@@ -2,7 +2,7 @@
 
 #### By _**Joey Palchak**_
 
-#### _{Brief description of application}_
+#### A web application that transforms user input for display, utilizing Test-Driven Development and HTML, CSS, and JavaScript.
 
 ## Technologies Used
 
@@ -22,7 +22,7 @@ _{This is a detailed description of your application. Give as much detail as nee
 3. Change your working directory to where you want the cloned directory.
 4. In your terminal, type `git clone` and use the copied URL from Step 1. Or, copy the following git command:
 ```bash
-git clone REPO URL
+git clone https://github.com/jfpalchak/mr-robogers-neighborhood.git
 ```
 5. Navigate to the top level of the newly cloned directory.
 6. Open index.html in your browser to view and navigate the webpage.

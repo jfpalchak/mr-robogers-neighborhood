@@ -71,7 +71,7 @@ function showResults(array) {
   const div = document.createElement('div');
   div.setAttribute('id','beepBoop-results');
   div.setAttribute('class', 'container');
-  document.body.append(div);
+  const body = document.body.append(div);
 
   //const ul = document.createElement('ul'); // LIST
   //div.append(ul);
@@ -89,6 +89,18 @@ function showResults(array) {
     }
   })
 
+  // if the printed results are longer than the viewport height
+  if (div.offsetHeight > window.innerHeight) {
+    const button = document.createElement('button');
+    const div2 = document.createElement('div');
+    div2.setAttribute('id', 'scroll-button');
+    div.append(div2);
+    button.setAttribute('type', 'button');
+    button.setAttribute('class', 'btn btn-primary');
+    button.append('Back to Top');
+    div2.append(button);
+    scrollTo(0, document.body.scrollHeight);
+  }
 }
 
 // handleSubmit() creates an event handler for the form submission

@@ -6,17 +6,32 @@
 }
 
 /* HEADER */
+.header {
+  padding: 10px;
+}
+
 .italic {
   font-style: italic;
 }
 
 /* FORM */
+.form-content {
+  padding: 20px;
+}
+
 label {
   font-weight: bold;
 }
 
 /* RESULTS */
-#beepBoop-results p{
+/* Add animation so user can see results print in real time? */
+#beepBoop-results p {
   padding: 10px;
   /* background-color:bisque; */
+}
+
+#scroll-button {
+  text-align: center;
+  margin: 10px auto;
+  padding-bottom: 10px;
 }
