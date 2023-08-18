@@ -92,13 +92,13 @@ Code: const number = 1;
       itIncludes(number, digit);
 Expected Output: true
 
-Test 2: "It should return true if the number is the digit '2'."
+Test 2: "It should also return true if the number is the digit '2'."
 Code: const number = 2;
       const digit = 2;
       itIncludes(number, digit);
 Expected Output: true
 
-Test 3: "It should return true if the number is the digit '3'."
+Test 3: "It should also return true if the number is the digit '3'."
 Code: const number = 3;
       const digit = 3;
       itIncludes(number, digit);
