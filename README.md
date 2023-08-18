@@ -86,41 +86,29 @@ Expected Ouput: []
 #### **Description:** itIncludes()
 ```javascript
 
-Test 1: "It should return true if the number is the digit '1'."
+Test 1: "It should return true if the number is the same as the digit."
 Code: const number = 1;
       const digit = 1;
       itIncludes(number, digit);
 Expected Output: true
 
-Test 2: "It should also return true if the number is the digit '2'."
-Code: const number = 2;
-      const digit = 2;
+Test 2: "It should return false if the number is not the same as the digit."
+Code: const number = 0;
+      const digit = 1;
       itIncludes(number, digit);
-Expected Output: true
+Expected Output: false
 
-Test 3: "It should also return true if the number is the digit '3'."
-Code: const number = 3;
-      const digit = 3;
-      itIncludes(number, digit);
-Expected Output: true
-
-Test 4: "It should return true if the number includes the digit '1'."
-Code: const number = 10;
+Test 3: "It should return true if the number includes the digit."
+Code: const number = 11;
       const digit = 1;
       itIncludes(number, digit);
 Expected Output: true
 
-Test 5: "It should return true if the number includes the digit '2'."
-Code: const number = 12;
-      const digit = 2;
+Test 4: "It should return false if the number does not include the digit."
+Code: const number = 55;
+      const digit = 1;
       itIncludes(number, digit);
-Expected Output: true
-
-Test 6: "It should return true if the number includes the digit '3'."
-Code: const number = 23;
-      const digit = 3;
-      itIncludes(number, digit);
-Expected Output: true
+Expected Output: false
 
 ```
 
