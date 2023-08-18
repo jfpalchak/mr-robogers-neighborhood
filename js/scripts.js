@@ -1,12 +1,11 @@
 // *******************
 // *  UTILITY LOGIC  *
 // *******************
+
+// itIncludes() takes a number and a digit as its parameters, respectively
+// if the number includes the digit, return true, otherwise return false
 function itIncludes(number, digit) {
-  if (number.toString().includes(digit)) {
-    return true;
-  } else {
-    return false;
-  }
+  return number.toString().includes(digit);
 }
 
 // *******************
@@ -24,20 +23,25 @@ function itIncludes(number, digit) {
 // It then returns this newly created array.
 function beepBoop(input) {
   let array = [];
+
+  // if the user submits an empty input box, 
+  // return the empty array
   if (input === ""){
     return array;
   }
 
+  // otherwise, create the elements of our array
   for (let i=0; i <= input; i++){
     array.push(i);
   }
 
+  // transform the newly created array
   let beepArray = array.map(function(number) {
-    if (number.toString().includes(3)) {
+    if (itIncludes(number, 3)) {
       return number = "Won't you be my neighbor?";
-    } else if (number.toString().includes(2)) {
+    } else if (itIncludes(number, 2)) {
       return number = "Boop!";
-    } else if (number.toString().includes(1)) {
+    } else if (itIncludes(number, 1)) {
       return number = "Beep!";
     } else {
       return number;
