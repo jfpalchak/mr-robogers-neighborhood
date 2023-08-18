@@ -25,9 +25,8 @@ label {
   font-weight: bold;
 }
 
-#reverse {
+#hidden {
   display: none;
-  float: right;
 }
 
 /* RESULTS */

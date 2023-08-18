@@ -20,7 +20,7 @@ function itIncludes(number, digit) {
 // and any number containing 3 with 'Won't you be my neighbor?'
 // The rule for replacing 3 is more important than replacing 2, 
 // and replacing 2 is more important than replacing 1.
-// It then returns this newly created array.
+// It then returns this newly transformed array.
 function beepBoop(input) {
   const array = [];
 
@@ -55,11 +55,13 @@ function beepBoop(input) {
 // *******************
 
 // removePreviousResults() check's if the DOM already contains the div element that shows the results,
-// and if it does, it removes it from the DOM
+// and if it does, it removes it from the DOM, and also hides the 'Reverse it!' button
 function removePreviousResults() {
   const divResults = document.getElementById('beepBoop-results');
+  const button = document.querySelector('.reverse');
   if (divResults) {
     divResults.remove();
+    button.setAttribute('id','hidden');
   }
 }
 
@@ -75,11 +77,17 @@ function linkBackToTopIfBig() {
 
     subDiv.setAttribute('id', 'to-top');
     toTop.setAttribute('href', '#top');
-    
+
     toTop.append('(Back to Top)');
     div.append(subDiv);
     subDiv.append(toTop);
   }
+}
+
+// showReverseButton() makes the 'Reverse it!' button visible
+function showReverseButton() {
+  const button = document.querySelector('.reverse');
+  button.removeAttribute('id','hidden');
 }
 
 // showResults() takes the new array as its parameter,
@@ -109,6 +117,7 @@ function showResults(array) {
   })
 
   linkBackToTopIfBig();
+  showReverseButton();
 
 }
 
@@ -122,12 +131,26 @@ function handleSubmit(e) {
   showResults(boopArray);
 }
 
-// handleForm() creates the form object variable, and calls on the event handler
-// for when the form submit button is pressed
+// handleReverseIt() creates an event handler for the 'Reverse it!' button
+// the 'Reverse' button only shows after an initial input submission;
+// if the button is clicked, it takes the original - or new - input and reverses
+// the order of the elements in the array, before displaying it on the page
+function handleReverseIt() {
+  const userInput = document.getElementById('user-number').value;
+  const boopArray = beepBoop(userInput);
+
+  showResults(boopArray.reverse());
+}
+
+// handleEverything() calls on each event handler for when
+// either the form submit button or the 'Reverse it!' button is pressed
 function handleEverything() {
   const form = document.querySelector('form');
   form.addEventListener('submit', handleSubmit);
+
+  const reverseButton = document.querySelector('.reverse');
+  reverseButton.addEventListener('click', handleReverseIt);
 }
 
 // load page resources before running all JS functions
-window.addEventListener("load", handleEverything);
+window.addEventListener('load', handleEverything);
