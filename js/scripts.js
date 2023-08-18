@@ -14,8 +14,10 @@ function itIncludes(number, digit) {
 // and replacing 2 is more important than replacing 1.
 // It then returns this newly created array.
 function beepBoop(input) {
-  
   let array = [];
+  if (input === ""){
+    return array;
+  }
 
   for (let i=0; i <= input; i++){
     array.push(i);
@@ -59,13 +61,20 @@ function showResults(array) {
   div.setAttribute('class', 'container');
   document.body.append(div);
 
-  const ul = document.createElement('ul');
-  div.append(ul);
+  //const ul = document.createElement('ul'); // LIST
+  //div.append(ul);
+  const p = document.createElement('p'); // PARAGRAPH
+  div.append(p);
 
   array.forEach(function(element, index) {
-    let li = document.createElement('li');
-    li.append(element);
-    ul.append(li);
+    //let li = document.createElement('li');
+    //li.append(element);
+    //ul.append(li);
+    if (index < array.length - 1){
+      p.append(element + ", ")
+    } else {
+      p.append(element)
+    }
   })
 
 }
@@ -76,6 +85,7 @@ function handleSubmit(e) {
 
   const userInput = document.getElementById('user-number').value;
   const boopArray = beepBoop(userInput);
+  console.log(boopArray);
 
   showResults(boopArray);
 }
