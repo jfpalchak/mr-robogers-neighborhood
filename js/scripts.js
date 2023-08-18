@@ -2,7 +2,7 @@
 // *  UTILITY LOGIC  *
 // *******************
 function itIncludes(number, digit) {
-
+  return true;
 }
 
 // *******************
