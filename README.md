@@ -117,7 +117,7 @@ Code: const number = 12;
 Expected Output: true
 
 Test 6: "It should return true if the number includes the digit '3'."
-Code: const number = 13;
+Code: const number = 23;
       const digit = 3;
       itIncludes(number, digit);
 Expected Output: true

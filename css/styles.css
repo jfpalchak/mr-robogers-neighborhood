@@ -1,0 +1,22 @@
+/* CONTAINERS */
+.container {
+  margin: 10px auto;
+  background-color:aliceblue;
+  border-radius: 10px;
+}
+
+/* HEADER */
+.italic {
+  font-style: italic;
+}
+
+/* FORM */
+label {
+  font-weight: bold;
+}
+
+/* RESULTS */
+#beepBoop-results p{
+  padding: 10px;
+  /* background-color:bisque; */
+}

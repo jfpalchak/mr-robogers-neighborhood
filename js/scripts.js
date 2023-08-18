@@ -1,9 +1,14 @@
-// UTILITY LOGIC
+// *******************
+// *  UTILITY LOGIC  *
+// *******************
 function itIncludes(number, digit) {
 
 }
 
-// BUSINESS LOGIC
+// *******************
+// * BUSINESS LOGIC  *
+// *******************
+
 
 // beepBoop() takes a single number as its parameter
 // It creates an array, from 0 to the given number by increments of 1,
@@ -38,9 +43,9 @@ function beepBoop(input) {
   return beepArray;
 }
 
-
-
-// UI LOGIC
+// *******************
+// *    UI LOGIC     *
+// *******************
 
 // removePreviousResults() check's if the DOM already contains the div element that shows the results,
 // and if it does, it removes it from the DOM
@@ -54,7 +59,14 @@ function removePreviousResults() {
 // showResults() takes the new array as its parameter,
 // then updates the DOM by making the resulting elements of the array visible to the user
 function showResults(array) {
-  removePreviousResults(); // first, check for and remove previous results
+  // first, check for and remove previous results
+  removePreviousResults();
+
+  // if the user doesn't enter a number, and the array has no length, 
+  // stop here and return null, otherwise continue on
+  if (!array.length) {
+    return null;
+  }
 
   const div = document.createElement('div');
   div.setAttribute('id','beepBoop-results');
@@ -70,7 +82,7 @@ function showResults(array) {
     //let li = document.createElement('li');
     //li.append(element);
     //ul.append(li);
-    if (index < array.length - 1){
+    if (index < array.length - 1) {
       p.append(element + ", ")
     } else {
       p.append(element)
@@ -85,6 +97,10 @@ function handleSubmit(e) {
 
   const userInput = document.getElementById('user-number').value;
   const boopArray = beepBoop(userInput);
+
+  // ********************************
+  // * DEBUGGING: WHAT'S THE ARRAY? *
+  // ********************************
   console.log(boopArray);
 
   showResults(boopArray);
