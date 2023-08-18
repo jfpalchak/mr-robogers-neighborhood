@@ -1,10 +1,23 @@
 
 
-// for test 1
+// for test 2
 function beepBoop(input) {
+  
   let array = [];
-  array.push(input);
-  return array;
+
+  for (let i=0; i <= input; i++){
+    array.push(i);
+  }
+
+  let beepArray = array.map(function(number) {
+    if (number === 1) {
+      return number = 'Beep!';
+    } else {
+      return number;
+    }
+  });
+  
+  return beepArray;
 }
 
 
