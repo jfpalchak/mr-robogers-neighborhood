@@ -132,14 +132,14 @@ function handleSubmit(e) {
 }
 
 // handleReverseIt() creates an event handler for the 'Reverse it!' button
-// the 'Reverse' button only shows after an initial input submission;
+// the 'Reverse' button only shows after an initial form submission;
 // if the button is clicked, it takes the original - or new - input and reverses
 // the order of the elements in the array, before displaying it on the page
 function handleReverseIt() {
   const userInput = document.getElementById('user-number').value;
-  const boopArray = beepBoop(userInput);
+  const reversedBoopArray = beepBoop(userInput).reverse();
 
-  showResults(boopArray.reverse());
+  showResults(reversedBoopArray);
 }
 
 // handleEverything() calls on each event handler for when

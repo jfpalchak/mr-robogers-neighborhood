@@ -21,7 +21,9 @@ This is a web application that asks the user for a single number of any size, an
 * For numbers that contain a 3, all digits are replaced with "Won't you be my neighbor?"
     * This substitution takes precedence over the presence of a number containing a 1, or a 2.
 
-The list is then presented for the user beneath the initial form. The user may continue submitting new numbers, presenting the user with new results with each submission. After the initial submission, a "Reverse it!" button will display beside the original "Submit" button. If the user clicks this new button, the original results will be reversed, starting from the highest value to the lowest. The user may use a new input value to "Submit" in ascending order, or again "Reverse it!" and display the new results in descending order.
+The list is then presented for the user below the form. The user may continue submitting new numbers, presenting the user with new results with each submission. 
+
+After the initial submission, a "Reverse it!" button will display beside the original "Submit" button. If the user clicks this new button, the original results will be reversed, starting from the highest value to the lowest. The user may use a new input value to "Submit" in ascending order, or again "Reverse it!" and display the new results in descending order.
 
 However, should the user submit an empty input, the results will be removed and the page will reset to it's default state, including the removal of the "Reverse it!" button.
 
@@ -39,11 +41,11 @@ git clone https://github.com/jfpalchak/mr-robogers-neighborhood.git
 
 ##### _Alternatively:_
 
-1. Go to the website directly via **[GitHub Pages](#link)**.
+1. Go to the website directly via **[GitHub Pages](https://jfpalchak.github.io/mr-robogers-neighborhood/)**.
 
 ## Known Bugs
 
-* No known bugs at this state.
+* When viewport width is below 560px, the 'Reverse it!' button floats awkwardly below the number input box.
 
 ## Tests
 
