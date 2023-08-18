@@ -2,7 +2,7 @@
 // *  UTILITY LOGIC  *
 // *******************
 function itIncludes(number, digit) {
-  if (number === digit ) {
+  if (number.toString().includes(digit)) {
     return true;
   } else {
     return false;
