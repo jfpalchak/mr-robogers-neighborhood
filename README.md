@@ -1,4 +1,4 @@
-# _{Application Name}_
+# _Mr. Roboger's Neighborhood_
 
 #### By _**Joey Palchak**_
 
@@ -17,7 +17,7 @@ _{This is a detailed description of your application. Give as much detail as nee
 
 ## Setup/Installation Requirements
 
-1. Copy the **[URL](#link)** provided for this repository.
+1. Copy the **[URL](https://github.com/jfpalchak/mr-robogers-neighborhood.git)** provided for this repository.
 2. Open Terminal.
 3. Change your working directory to where you want the cloned directory.
 4. In your terminal, type `git clone` and use the copied URL from Step 1. Or, copy the following git command:
@@ -61,20 +61,61 @@ Code: const input = 3;
       beepBoop(input);
 Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?"]
 
-Test 5: "If the number includes the digit 1, the entire number is replaced with 'Beep!'."
+Test 5: "If the number includes the digit '1', the entire number is replaced with 'Beep!'."
 Code: const input = 11;
       beepBoop(input);
 Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, "Beep!", "Beep!"]
 
-Test 6: "If the number includes the digit 2, the entire number is replaced with 'Boop!' - even if the number also includes the digit 1."
+Test 6: "If the number includes the digit '2', the entire number is replaced with 'Boop!' - even if the number also includes the digit '1'."
 Code: const input = 12;
       beepBoop(input);
 Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, "Beep!", "Beep!", "Boop!"]
 
-Test 7: "If the number includes the digit 3, the entire number is replaced with 'Won't you be my neighbor?' - even if the number also includes the digit 1, or digit 2."
+Test 7: "If the number includes the digit '3', the entire number is replaced with 'Won't you be my neighbor?' - even if the number also includes the digit '1', or digit '2'."
 Code: const input = 13;
       beepBoop(input);
 Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, "Beep!", "Beep!", "Boop!", "Won't you be my neighbor?"]
+
+```
+
+#### **Description:** itIncludes()
+```javascript
+
+Test 1: "It should return true if the number is the digit '1'."
+Code: const number = 1;
+      const digit = 1;
+      itIncludes(number, digit);
+Expected Output: true
+
+Test 2: "It should return true if the number is the digit '2'."
+Code: const number = 2;
+      const digit = 2;
+      itIncludes(number, digit);
+Expected Output: true
+
+Test 3: "It should return true if the number is the digit '3'."
+Code: const number = 3;
+      const digit = 3;
+      itIncludes(number, digit);
+Expected Output: true
+
+Test 4: "It should return true if the number includes the digit '1'."
+Code: const number = 10;
+      const digit = 1;
+      itIncludes(number, digit);
+Expected Output: true
+
+Test 5: "It should return true if the number includes the digit '2'."
+Code: const number = 12;
+      const digit = 2;
+      itIncludes(number, digit);
+Expected Output: true
+
+Test 6: "It should return true if the number includes the digit '3'."
+Code: const number = 13;
+      const digit = 3;
+      itIncludes(number, digit);
+Expected Output: true
 
 ```
 
