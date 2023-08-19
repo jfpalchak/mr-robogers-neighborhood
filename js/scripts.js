@@ -23,7 +23,6 @@ function itIncludes(number, digit) {
 // It then returns this newly transformed array.
 function beepBoop(input, name) {
   const array = [];
-  array.push(name);
 
   // if the user submits an empty input box, return the empty array
   if (input === ""){
@@ -38,7 +37,7 @@ function beepBoop(input, name) {
   // transform the newly created array according to our logic
   let beepArray = array.map(function(number) {
     if (itIncludes(number, 3)) {
-      return number = "Won't you be my neighbor?";
+      return number = "Won't you be my neighbor, " + name + "?";
     } else if (itIncludes(number, 2)) {
       return number = "Boop!";
     } else if (itIncludes(number, 1)) {
