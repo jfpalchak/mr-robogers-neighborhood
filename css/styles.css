@@ -35,6 +35,10 @@ label {
 }
 
 /* RESULTS */
+#beepBoop-results p {
+  padding: 10px;
+}
+
 #to-top {
   text-align: center;
   margin: 10px auto;
