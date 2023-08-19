@@ -23,6 +23,7 @@ function itIncludes(number, digit) {
 // It then returns this newly transformed array.
 function beepBoop(input, name) {
   const array = [];
+  array.push(name);
 
   // if the user submits an empty input box, return the empty array
   if (input === ""){
