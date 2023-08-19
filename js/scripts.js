@@ -28,16 +28,17 @@ function beepBoop(input, name) {
   if (input === ""){
     return array;
   }
+
+  // otherwise, create the elements of our array
+  for (let i=0; i <= input; i++){
+    array.push(i);
+  }
+
   // if the user submits a name, get it ready to concatenate,
   // otherwise, if the user didn't submit a name, it stay's
   // an empty string ("")
   if (name) {
     name = ", " + name;
-  }
-
-  // otherwise, create the elements of our array
-  for (let i=0; i <= input; i++){
-    array.push(i);
   }
 
   // transform the newly created array according to our logic
@@ -141,7 +142,7 @@ function handleSubmit(e) {
 // handleReverseIt() creates an event handler for the 'Reverse it!' button
 // the 'Reverse' button only shows after an initial form submission;
 // if the button is clicked, it takes the original - or new - input and reverses
-// the order of the elements in the array, before displaying it on the page
+// the order of the elements in the array before displaying it on the page
 function handleReverseIt() {
   const userInput = document.getElementById('user-number').value;
   const userName = document.getElementById('user-name').value;
