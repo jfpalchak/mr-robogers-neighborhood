@@ -21,12 +21,18 @@ function itIncludes(number, digit) {
 // The rule for replacing 3 is more important than replacing 2, 
 // and replacing 2 is more important than replacing 1.
 // It then returns this newly transformed array.
-function beepBoop(input) {
+function beepBoop(input, name) {
   const array = [];
 
-  // if the user submits an empty input box, return the empty array
+  // if the user submits without a number, return the empty array
   if (input === ""){
     return array;
+  }
+  // if the user submits a name, get it ready to concatenate,
+  // otherwise, if the user didn't submit a name, it stay's
+  // an empty string ("")
+  if (name) {
+    name = ", " + name;
   }
 
   // otherwise, create the elements of our array
@@ -37,7 +43,7 @@ function beepBoop(input) {
   // transform the newly created array according to our logic
   let beepArray = array.map(function(number) {
     if (itIncludes(number, 3)) {
-      return number = "Won't you be my neighbor?";
+      return number = "Won't you be my neighbor" + name + "?";
     } else if (itIncludes(number, 2)) {
       return number = "Boop!";
     } else if (itIncludes(number, 1)) {
@@ -126,7 +132,8 @@ function handleSubmit(e) {
   e.preventDefault();
 
   const userInput = document.getElementById('user-number').value;
-  const boopArray = beepBoop(userInput);
+  const userName = document.getElementById('user-name').value;
+  const boopArray = beepBoop(userInput, userName);
 
   showResults(boopArray);
 }
@@ -137,7 +144,8 @@ function handleSubmit(e) {
 // the order of the elements in the array, before displaying it on the page
 function handleReverseIt() {
   const userInput = document.getElementById('user-number').value;
-  const reversedBoopArray = beepBoop(userInput).reverse();
+  const userName = document.getElementById('user-name').value;
+  const reversedBoopArray = beepBoop(userInput, userName).reverse();
 
   showResults(reversedBoopArray);
 }

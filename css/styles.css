@@ -1,7 +1,12 @@
+/* BODY */
+body {
+  background-color: #FFF8F0;
+}
+
 /* CONTAINERS */
 .container {
   margin: 10px auto;
-  background-color:aliceblue;
+  background-color: #b5d6da;
   border-radius: 10px;
 }
 
@@ -21,6 +26,8 @@
 
 label {
   font-weight: bold;
+  width: 150px;
+  text-align: right;
 }
 
 #hidden {
