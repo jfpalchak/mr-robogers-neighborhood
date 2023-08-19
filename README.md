@@ -120,8 +120,6 @@ Code: const input = 3;
       beepBoop(input, name);
 Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?"]
 
-
-
 ```
 
 #### **Description:** itIncludes()
