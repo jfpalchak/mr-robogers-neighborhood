@@ -21,7 +21,7 @@ function itIncludes(number, digit) {
 // The rule for replacing 3 is more important than replacing 2, 
 // and replacing 2 is more important than replacing 1.
 // It then returns this newly transformed array.
-function beepBoop(input) {
+function beepBoop(input, name) {
   const array = [];
 
   // if the user submits an empty input box, return the empty array
