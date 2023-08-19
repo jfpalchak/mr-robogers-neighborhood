@@ -25,9 +25,11 @@ The list is then presented for the user below the form. The user may continue su
 
 After the initial submission, a "Reverse it!" button will display beside the original "Submit" button. If the user clicks this new button, the original results will be reversed, starting from the highest value to the lowest. The user may use a new input value to "Submit" in ascending order, or again "Reverse it!" and display the new results in descending order.
 
+Optionally, the user may also choose to enter their name into the provided input on the form. If a name is submitted along with a number, their name will show with each iteration of "Won't you be my neighbor, <userName>?". Otherwise, if no name is given, the substitution of the digit '3' will remain as originally defined above.
+
 If the user submits a number large enough to print results that are longer than the user's view window allows - and a scroll bar appears - a link will be created at the bottom of the page; should the user scroll to the bottom, this link will bring the user back to the top of the webpage to use the submission form again.
 
-However, should the user submit an empty input, the results will be removed and the page will reset to it's default state, including the removal of the "Reverse it!" button.
+However, should the user submit without having entered a number - regardless of whether a name has been submitted - the results will be removed and the page will reset to it's default state, including the removal of the "Reverse it!" button.
 
 ## Setup/Installation Requirements
 
@@ -110,13 +112,13 @@ Test 11: "If the user submits their name, it should be added to the string 'Won'
 Code: const input = 3;
       const name = "Joe";
       beepBoop(input, name);
-Expected Output: [0, "Beep!", "Boop!","Won't you be my neighbor, Joe?"]
+Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor, Joe?"]
 
 Test 12: "If the user doesn't submit their name, but does submit a number, any occurrence of the digit '3' is still replaced with 'Wont't you be my neighbor?'."
 Code: const input = 3;
       const name = "";
       beepBoop(input, name);
-Expected Output: [0, "Beep!", "Boop!","Won't you be my neighbor?"]
+Expected Output: [0, "Beep!", "Boop!", "Won't you be my neighbor?"]
 
 
 
